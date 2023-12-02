@@ -1,11 +1,11 @@
 import React from 'react'
-import { type FilterValue, type ListOfTodos } from '../types'
+import { type FilterValue } from '../types'
 import { Filters } from './Filters'
 
 interface Props {
     activeCount: number
     completedCount: number
-    onClearCompleted: ({ todos }: ListOfTodos) => void
+    onClearCompleted: () => void
     filterSelected: FilterValue
     handlerFilterChange: (filter: FilterValue) => void
 }
@@ -35,7 +35,5 @@ const Footer: React.FC<Props> = ({
     </footer>
     )
 }
-
-
 
 export default Footer

@@ -20,7 +20,7 @@ const CreateToDo: React.FC<Props> = ({ saveTodo }: Props) => {
             type="text"
             className='new-todo'
             value={inputValue}
-            onChange={(event) => setInputValue(event.target.value)}
+            onChange={(event) => { setInputValue(event.target.value) }}
             placeholder='Revisar los horarios de clases...'
             autoFocus
             />
