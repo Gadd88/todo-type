@@ -3,7 +3,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Todos from './components/Todos'
 import { TODO_FILTERS } from './consts'
-import { type TodoId, type FilterValue, type TodoString, type Todo as TodoType } from './types'
+import { type FilterValue, type TodoString, type Todo as TodoType } from './types'
 
 const mockTodos = [
   {
@@ -27,7 +27,7 @@ const App = (): JSX.Element => {
   const [todos, setTodos] = useState(mockTodos)
   const [filterSelected, setFilterSelected] = useState<FilterValue>(TODO_FILTERS.ALL)
 
-  const handleRemove = ({ id }: TodoId): void => {
+  const handleRemove = ({ id }: Pick<TodoType, 'id'>): void => {
     const newTodos = todos.filter(todo => todo.id !== id)
     setTodos(newTodos)
   }
