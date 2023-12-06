@@ -2,8 +2,8 @@ import React from 'react'
 import { type TodoId, type Todo as TodoType, type TodoCompleted } from '../types'
 
 interface Props extends TodoType {
-  handleRemove: ({ id }: TodoId) => void
-  handleCompleted: ({ id, completed }: { id: TodoId, completed: TodoCompleted }) => void
+  handleRemove: ({ id }: Pick<TodoType, 'id'>) => void
+  handleCompleted: ({ id, completed }: Pick<TodoType, 'id' | 'completed'>) => void
 }
 const Todo: React.FC<Props> = ({ id, title, completed, handleRemove, handleCompleted }) => {
   const handleChangeCheckbox = (event: React.ChangeEvent<HTMLInputElement>): void => {

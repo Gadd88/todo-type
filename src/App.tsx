@@ -3,7 +3,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Todos from './components/Todos'
 import { TODO_FILTERS } from './consts'
-import { type TodoId, type TodoCompleted, type FilterValue, type TodoString } from './types'
+import { type TodoId, type TodoCompleted, type FilterValue, type TodoString, Todo as TodoType } from './types'
 
 const mockTodos = [
   {
@@ -32,7 +32,7 @@ const App = (): JSX.Element => {
     setTodos(newTodos)
   }
   const handleCompleted = (
-    { id, completed }: { id: TodoId, completed: TodoCompleted } /* o puedo usar Pick<TodoType, 'id' | 'completed'> */
+    { id, completed }: /* { id: TodoId, completed: TodoCompleted } */ Pick<TodoType, 'id' | 'completed'>
     ): void => {
     const newTodos = todos.map(todo => {
       if (todo.id === id) {
