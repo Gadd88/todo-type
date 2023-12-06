@@ -3,7 +3,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Todos from './components/Todos'
 import { TODO_FILTERS } from './consts'
-import { type TodoId, type TodoCompleted, type FilterValue, type TodoString, Todo as TodoType } from './types'
+import { type TodoId, type FilterValue, type TodoString, type Todo as TodoType } from './types'
 
 const mockTodos = [
   {

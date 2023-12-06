@@ -1,5 +1,5 @@
 import React from 'react'
-import { type TodoId, type Todo as TodoType, type TodoCompleted } from '../types'
+import { type Todo as TodoType } from '../types'
 
 interface Props extends TodoType {
   handleRemove: ({ id }: Pick<TodoType, 'id'>) => void
