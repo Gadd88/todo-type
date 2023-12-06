@@ -76,12 +76,12 @@ const App = (): JSX.Element => {
         todos={filteredTodos}
         handleRemove={handleRemove}
         handleCompleted={handleCompleted}/>
-        <Footer
-          activeCount={activeCount}
-          filterSelected={filterSelected}
-          completedCount={completedCount}
-          onClearCompleted={handlerRemoveCompleted}
-          handlerFilterChange={handlerFilterChange}/>
+      <Footer
+        activeCount={activeCount}
+        filterSelected={filterSelected}
+        completedCount={completedCount}
+        onClearCompleted={handlerRemoveCompleted}
+        handlerFilterChange={handlerFilterChange}/>
     </div>
   )
 }

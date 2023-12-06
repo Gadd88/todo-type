@@ -3,12 +3,12 @@ import { type FilterValue } from '../types'
 
 interface Props {
     filterSelected: typeof TODO_FILTERS[keyof typeof TODO_FILTERS] /* de esta forma podemos agregar otras constantes a los tipos y los importaria automaticamente, es mas mantenible */
-    onFilterChange: FilterValue
+    handlerFilterChange: (filter: FilterValue) => void
 }
 
 export const Filters: React.FC<Props> = ({
     filterSelected,
-    onFilterChange
+    handlerFilterChange
 }) => {
     return (
         <ul className="filters">
@@ -24,7 +24,7 @@ export const Filters: React.FC<Props> = ({
                                     className={className}
                                     onClick={(event) => {
                                         event.preventDefault() /* no se debe ejecutar el evento por defecto */
-                                        onFilterChange(key as FilterValue)
+                                        handlerFilterChange(key as FilterValue)
                                     }}>{literal}</a>
                         </li>
                     )

@@ -24,7 +24,7 @@ const Footer: React.FC<Props> = ({
         </span>
         <Filters
             filterSelected={filterSelected}
-            onFilterChange={handlerFilterChange }/>
+            handlerFilterChange={handlerFilterChange }/>
         {
             completedCount > 0 && (
                 <button
